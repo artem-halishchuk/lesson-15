@@ -1,0 +1,69 @@
+$text-colors: (
+  // heading: rgb(0, 0, 0),
+  // content: #7d7987,
+  heading: black,
+  content: #7d7987,
+  inverse: rgb(255, 255, 255),
+  site-text: #458ff6
+);
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Mulish-Bold.woff2") format("woff2");
+}
+@mixin font-700 {
+  font-weight: 700;
+  color: map-get($text-colors, "heading");
+}
+@mixin font-700-foother {
+  font-weight: 700;
+}
+@mixin font-700-h2 {
+  font-weight: 700;
+  color: map-get($text-colors, "heading");
+  font-size: 3.6em;
+  line-height: 1.56;
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Mulish-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Mulish-Regular.woff2") format("woff2");
+}
+@mixin font-400 {
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/Mulish-Light.woff2") format("woff2");
+}
+
+@mixin font-300 {
+  font-weight: 300;
+}
+
+@mixin font-300-hero {
+  font-weight: 300;
+  color: map-get($text-colors, "content");
+}
+
+@mixin font-300-content {
+  font-weight: 300;
+  color: map-get($text-colors, "content");
+  font-size: 1.8em;
+  line-height: 1.67;
+}
