@@ -1,0 +1,145 @@
+.opinion-content {
+  width: 1120px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 24px;
+  background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+  padding: 64px 118px 83px 118px;
+  .opinion-content-heading {
+    @include font-700-h2;
+    line-height: 1.33;
+    text-align: center;
+    color: map-get($text-colors, "inverse");
+    &::after {
+      content: "";
+      width: 56px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: map-get($text-colors, "inverse");
+      display: block;
+      margin: 26px auto 68px auto;
+    }
+  }
+  .opinion-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .piople {
+      display: flex;
+      align-items: center;
+      img {
+        border-radius: 50%;
+        border: 6px solid white;
+        display: inline-flex;
+        margin-right: 29px;
+        width: 133px;
+      }
+      .about-piople {
+        h3 {
+          @include font-700-h2;
+          font-size: 2.2em;
+          line-height: 2.67;
+          color: map-get($text-colors, "inverse");
+        }
+        h4 {
+          @include font-400;
+          font-size: 1.8em;
+          line-height: 2.18;
+          color: map-get($text-colors, "inverse");
+        }
+      }
+    }
+    .piople-opinion {
+      width: 420px;
+      @include font-400;
+      font-size: 1.9em;
+      line-height: 1.58;
+      color: map-get($text-colors, "inverse");
+    }
+  }
+}
+
+.nav-opinion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 43px;
+  li {
+    &:not(:first-child):not(:last-child) button {
+      border: none;
+      outline: none;
+      background-color: #5b9bf3;
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    &:not(:first-child):not(:last-child):not(:nth-last-child(2)) button {
+      margin-right: 20px;
+    }
+    button {
+      border: none;
+      outline: none;
+      opacity: 0.5;
+    }
+    &:first-child button,
+    &:last-child button {
+      background-color: transparent;
+    }
+    &:first-child button img,
+    &:last-child button img {
+      width: 18px;
+    }
+    &:first-child button {
+      margin-right: 90px;
+    }
+    &:last-child button {
+      margin-left: 90px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: 1220px) {
+  .opinion-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1120px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .opinion-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 990px;
+    padding: 64px 70px 83px 70px;
+    //gap: 20px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .opinion-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+  }
+  .opinion-items {
+    width: 620px;
+    flex-direction: column;
+    .piople {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media (max-width: 790px) {
+  .opinion-content {
+    width: 479px;
+    padding: 64px 10px 83px 10px;
+    align-items: center;
+  }
+  .opinion-items {
+    width: 459px;
+    justify-content: center;
+  }
+}

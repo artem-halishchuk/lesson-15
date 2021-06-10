@@ -1,0 +1,140 @@
+.hero {
+  min-height: 100vh;
+  background-color: key1;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding-top: 60px;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-header {
+    span {
+      background-color: map-get($site-colors, "general-color");
+      color: map-get($text-colors, "inverse");
+    }
+    strong {
+      color: map-get($text-colors, "heading");
+    }
+  }
+  .nav-header {
+    @include font-400;
+    font-size: 1.8em;
+    line-height: 1.28;
+    color: map-get($text-colors, "content");
+    opacity: 0.5;
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  img {
+    width: 600px;
+  }
+  .hero-content-article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 445px;
+
+    h1 {
+      @include font-700;
+      width: 427px;
+      font-size: 4.8em;
+      line-height: 1.17;
+    }
+
+    p {
+      @include font-300-hero;
+      width: 440px;
+      margin-top: 25px;
+      font-size: 2.1em;
+      line-height: 1.52;
+    }
+
+    button {
+      @include button-solid;
+    }
+  }
+}
+
+@media (min-width: 1220px) {
+  .hero,
+  header {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .hero {
+    width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+  }
+  .hero-content img {
+    height: auto;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  header,
+  .hero-content {
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-content {
+    width: 760px;
+    .hero-content-article {
+      //align-items: center;
+      flex-grow: inherit;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    img {
+      display: none;
+    }
+  }
+}
+@media (max-width: 790px) {
+  .hero,
+  header {
+    width: 479px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    .nav-header {
+      //@include font-400;
+      gap: 20px;
+    }
+  }
+  .hero-content {
+    width: 479px;
+    .hero-content-article {
+      align-items: center;
+      flex-grow: inherit;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

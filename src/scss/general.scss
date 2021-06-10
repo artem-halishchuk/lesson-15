@@ -1,0 +1,115 @@
+body {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-size: 10px;
+}
+.hero main {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+
+$site-colors: (
+  general-color: #458ff6,
+  click-color: #3b7fdd,
+  general-inverse-color: rgb(255, 255, 255),
+);
+
+.logo {
+  font-weight: 700;
+  display: flex;
+}
+.logo span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  font-size: 2.6em;
+  line-height: 1;
+  margin-right: 12px;
+}
+.logo strong {
+  display: inline-flex;
+  align-items: center;
+  font-size: 2.4em;
+  line-height: 1.1;
+}
+
+.logo-foother span {
+  background-color: map-get($site-colors, "general-inverse-color");
+  color: map-get($site-colors, "general-color");
+}
+.logo-foother strong {
+  color: map-get($text-colors, "inverse");
+}
+
+@mixin link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+  color: map-get($text-colors, "site-text");
+
+  border: 2px solid map-get($site-colors, "general-color");
+  border-radius: 55px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.margin-block {
+  margin-bottom: 190px;
+}
+
+@mixin button-solid {
+  border: none;
+  outline: none;
+  padding: 19px 38px;
+  border-radius: 55px;
+  @include font-700;
+  font-size: 1.8em;
+  line-height: 1.1;
+  background-color: map-get($site-colors, "general-color");
+  color: map-get($text-colors, "inverse");
+  margin-top: 48px;
+  &:active {
+    background-color: map-get($site-colors, "click-color");
+  }
+}
+
+@mixin line-heading-balack {
+  &::after {
+    content: "";
+    width: 56px;
+    height: 2px;
+    border-radius: 1px;
+    display: block;
+    margin: 26px auto 0 auto;
+    background-color: black;
+  }
+}
+@mixin line-heading-white {
+  &::after {
+    content: "";
+    width: 56px;
+    height: 2px;
+    border-radius: 1px;
+    display: block;
+    margin: 26px auto 0 auto;
+    background-color: white;
+  }
+}
