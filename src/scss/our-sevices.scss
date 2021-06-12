@@ -73,12 +73,7 @@
 
 @media (max-width: 1220px) {
   .our-services {
-    margin-left: auto;
-    margin-right: auto;
     width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-    //gap: 40px;
     nav {
       .our-services-card {
         display: grid;
@@ -92,21 +87,9 @@
 
 @media (max-width: 1040px) {
   .our-services {
-    margin-left: auto;
-    margin-right: auto;
     width: 760px;
-    margin-left: auto;
-    margin-right: auto;
     .our-services-text {
       width: 650px;
-    }
-    nav {
-      .our-services-card {
-        display: grid;
-        gap: 35px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-      }
     }
   }
 }
@@ -115,8 +98,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 479px;
-    margin-left: auto;
-    margin-right: auto;
     .our-services-text {
       width: 400px;
     }
@@ -127,6 +108,18 @@
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 1fr;
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .our-services {
+    width: 300px;
+    .our-services-text {
+      width: 300px;
+    }
+    nav > .our-services-card > li {
+      width: 300px;
     }
   }
 }
