@@ -73,7 +73,7 @@ header {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .hero,
   header {
     width: 1200px;
@@ -92,7 +92,7 @@ header {
   }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 990px) {
   .hero,
   header,
   .hero-content {
