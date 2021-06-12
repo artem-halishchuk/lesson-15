@@ -14,7 +14,7 @@
     flex-direction: column;
     .providers-heading {
       @include font-700-h2;
-      width: 401px;
+      width: 400px;
       &::after {
         content: "";
         width: 56px;
@@ -39,20 +39,13 @@
 
 @media (min-width: 1220px) {
   .providers {
-    margin-left: auto;
-    margin-right: auto;
     width: 1120px;
   }
 }
 
 @media (max-width: 1220px) {
   .providers {
-    margin-left: auto;
-    margin-right: auto;
     width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-    //gap: 20px;
     img {
       height: auto;
       width: 50%;
@@ -62,23 +55,33 @@
 
 @media (max-width: 1040px) {
   .providers {
-    margin-left: auto;
-    margin-right: auto;
     width: 760px;
-    margin-left: auto;
-    margin-right: auto;
     img {
-      height: auto;
       width: 42%;
     }
   }
 }
+
 @media (max-width: 790px) {
   .providers {
     width: 479px;
     justify-content: center;
     img {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .providers {
+    width: 300px;
+    .providers-content {
+      .providers-heading {
+        width: 300px;
+      }
+      .providers-text {
+        width: 300px;
+      }
     }
   }
 }

@@ -73,19 +73,18 @@ header {
   }
 }
 
-@media (min-width: 1220px) {
+@media (max-width: 1200px) {
   .hero,
   header {
     width: 1200px;
   }
 }
 
-@media (max-width: 1220px) {
-  .hero {
+@media (max-width: 1200px) {
+  .hero,
+  header {
     width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 40px;
+    //gap: 40px;
   }
   .hero-content img {
     height: auto;
@@ -136,5 +135,27 @@ header {
       margin-top: 20px;
       margin-bottom: 20px;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    width: 300px;
+    header {
+      width: 300px;
+    }
+  }
+  .hero-content {
+    width: 300px;
+    .hero-content-article {
+      width: 300px;
+      h1,
+      p {
+        width: 300px;
+      }
+    }
+  }
+  .nav-header {
+    flex-direction: column;
   }
 }
